@@ -24,6 +24,8 @@ init_db()
 
 external_stylesheets = [dbc.themes.DARKLY]
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, suppress_callback_exceptions=True)
+app = dash.Dash(__name__)
+server = app.server 
 app.title = "BioMonitor Pro"
 
 
@@ -372,4 +374,5 @@ def dummy(x): return no_update
 
 if __name__ == "__main__":
     app.run_server(debug=True, port=8050)
+
 
